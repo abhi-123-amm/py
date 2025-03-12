@@ -1,7 +1,14 @@
+my_project/
+│
+├── app.py               # Flask backend code (your provided code)
+├── templates/
+│   └── index.html       # Frontend HTML file (where you’ll have your form)
+└── static/
+    └── style.css        # Optional CSS file for styling
 from flask import Flask, render_template, request, jsonify
 import random
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Simulate student data and room availability
 students = []
@@ -39,5 +46,5 @@ def add_student():
     return jsonify({"message": "Student added successfully", "student": student})
 
 # Run the app
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True)
